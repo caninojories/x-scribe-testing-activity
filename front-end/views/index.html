@@ -1,0 +1,97 @@
+<!doctype html>
+<html data-ng-app="ngAPI" ng-strict-di>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible", content="IE=edge"/>
+    <base href="/" />
+    <title> J.Ca </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <style>
+        .ng-hide {
+          display: none!important;
+        }
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
+    <!-- build:css /css/vendor.css-->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower/ionicons/css/ionicons.css" />
+    <link rel="stylesheet" href="/bower/toastr/toastr.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css /css/app.css-->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/.tmp/stylus/app.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body ng-class="{'modal-open': modalOpen}">
+    <section id="content" class="ui-view-container" >
+      <div data-ng-controller="Shell as vm" ng-cloak>
+        <div ui-view></div>
+      </div>
+    </section>
+
+    <!-- build:js /js/vendor.js-->
+    <!-- bower:js -->
+    <script src="/bower/angular/angular.js"></script>
+    <script src="/bower/angular-animate/angular-animate.js"></script>
+    <script src="/bower/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower/jquery/dist/jquery.js"></script>
+    <script src="/bower/lodash/lodash.js"></script>
+    <script src="/bower/restangular/dist/restangular.js"></script>
+    <script src="/bower/satellizer/satellizer.js"></script>
+    <script src="/bower/toastr/toastr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild-->
+
+    <!-- build:js /js/app.js-->
+    <!-- inject:js -->
+    <script src="/js/core/module.js"></script>
+    <script src="/js/exception/module.js"></script>
+    <script src="/js/layout/module.js"></script>
+    <script src="/js/logger/module.js"></script>
+    <script src="/js/promise/module.js"></script>
+    <script src="/js/promise-request/module.js"></script>
+    <script src="/js/router/module.js"></script>
+    <script src="/js/services/module.js"></script>
+    <script src="/js/widgets/module.js"></script>
+    <script src="/js/routes/main/module.js"></script>
+    <script src="/js/routes/survey/module.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/constants/constants.js"></script>
+    <script src="/js/constants/ngConstants.js"></script>
+    <script src="/js/core/config.js"></script>
+    <script src="/js/core/constants.js"></script>
+    <script src="/js/exception/exception-handler.provider.js"></script>
+    <script src="/js/exception/exception.js"></script>
+    <script src="/js/layout/shell.js"></script>
+    <script src="/js/logger/logger.js"></script>
+    <script src="/js/promise/DataParams.js"></script>
+    <script src="/js/promise/DataQuery.js"></script>
+    <script src="/js/promise-request/withParams.js"></script>
+    <script src="/js/promise-request/withQuery.js"></script>
+    <script src="/js/router/routerhelper.js"></script>
+    <script src="/js/services/Settings.js"></script>
+    <script src="/js/routes/main/main.js"></script>
+    <script src="/js/routes/main/route.js"></script>
+    <script src="/js/routes/survey/pieDirective.js"></script>
+    <script src="/js/routes/survey/results.js"></script>
+    <script src="/js/routes/survey/resultsDirective.js"></script>
+    <script src="/js/routes/survey/route.js"></script>
+    <script src="/js/routes/survey/summary.js"></script>
+    <script src="/js/routes/survey/summaryDirective.js"></script>
+    <script src="/js/routes/survey/survey.js"></script>
+    <script src="/js/services/api/user.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<div class="survey">
+  <div style="padding: 10px;display: flex;align-items: center; justify-content: center">
+    <a href="" class="button" ui-sref="surveyResults">View Existing Survey</a>
+    <a href="" class="button" ui-sref="surveySummary">View Summary</a>
+    <a href="" class="button" ui-sref="main">Main</a>
+  </div>
+  <div class="button center" ng-show="vm.status">{{vm.status}}</div>
+  <form
+  name='surveyForm'
+  novalidate='novalidate'
+  class="xscribe-36-offset-36"
+  ng-submit="vm.survey(surveyForm)">
+    <div class="padding">
+      <input
+      type="text"
+      placeholder="Name"
+      name="name"
+      required
+      class="input xscribe-40"
+      ng-class="{'has-error' : surveyForm.name.$invalid && !surveyForm.name.$pristine}"
+      ng-model="vm.name">
+    </div>
+    <div class="help-block padding" ng-show="surveyForm.name.$dirty && surveyForm.name.$error.required">
+      Name is required
+    </div>
+
+    {{signupForm.name.$error}}
+
+    <div class="padding">
+      <input
+      type="email"
+      placeholder="Email"
+      name="email"
+      required
+      class="input xscribe-40"
+      ng-class="{'has-error' : surveyForm.email.$invalid && !surveyForm.email.$pristine}"
+      ng-model="vm.email">
+    </div>
+
+    <div class="help-block padding" ng-show="surveyForm.email.$dirty && surveyForm.email.$error.required">
+      Email is required
+    </div>
+
+    <div class="help-block padding" ng-show="surveyForm.email.$error.email">
+      Please enter an email address
+    </div>
+
+    <div class="padding">
+      <select
+      name="gender"
+      required
+      class="select xscribe-45 padding"
+      ng-class="{'has-error' : vm.gender == 'none' && !surveyForm.gender.$pristine}"
+      ng-model="vm.gender"
+      ng-init="vm.gender = 'none'">
+        <option value="none" selected>Please select your Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="padding">
+      <select
+      name="color"
+      required
+      class="select xscribe-45"
+      ng-class="{'has-error' : vm.color == 'none' && !surveyForm.color.$pristine}"
+      ng-model="vm.color"
+      ng-init="vm.color = 'none'">
+        <option value="{{color.value}}" {{color.status}} ng-repeat="color in vm.colorData">{{color.name}}</option>
+      </select>
+    </div>
+
+    <div class="padding" ng-show="vm.color === 'Other'">
+      <input
+      type="text"
+      placeholder="Please Specify..."
+      name="other"
+      required
+      class="input xscribe-40"
+      ng-class="{'has-error' : surveyForm.other.$dirty && (surveyForm.other.$error.required || vm.isColor)}"
+      ng-model="vm.other">
+    </div>
+    <div class="help-block padding" ng-show="surveyForm.other.$dirty && vm.other == undefined">
+      Please Specify...
+    </div>
+
+    <div class="padding">
+      <input
+      type="submit"
+      value="Submit"
+      class="input-submit xscribe-45">
+    </div>
+  </form>
+</div>

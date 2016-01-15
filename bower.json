@@ -1,0 +1,24 @@
+{
+  "name": "pageant",
+  "version": "0.0.0",
+  "description": "Boilerplate for my NODEJS Projects",
+  "author": "Jo-Ries P. Canino",
+  "email": "canino_jories@hotmail.com",
+  "private": "true",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.2.0",
+    "restangular": "~1.5.1",
+    "satellizer": "~0.13.3",
+    "ionicons": "~2.0.1",
+    "toastr": "~2.1.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8",
+    "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js",
+    "bardjs": "~0.1.8"
+  }
+}

@@ -1,0 +1,26 @@
+<div class="xscribe-36-offset-36" style="padding: 15px;">
+  <a href="" class="button" ui-sref="survey">Answer the Survey</a>
+  <a href="" class="button" ui-sref="surveyResults">View Existing Survey</a>
+  <a href="" class="button" ui-sref="main">Main</a>
+</div>
+<div style="display: flex;
+    justify-content: center;">
+  <a href="" class="button" ng-class="{'active': vm.activeCss}" ng-click="vm.active()">Table</a>
+  <a href="" class="button" ng-class="{'active': !vm.activeCss}" ng-click="vm.active()">Pie</a>
+</div>
+
+<on-load-table-summary
+  ng-model="vm.summaryData"
+  t-header="['Color', 'Occurences']"
+  ng-show="vm.activeCss">
+</on-load-table-summary>
+
+<div
+  class="canvas"
+  on-load-pie-summary
+  ng-model="vm.summaryData"
+  ng-show="!vm.activeCss">
+  <canvas id="canvas" width="400" height="400"> +
+    This text is displayed if your browser does not support HTML5 Canvas.
+  </canvas>
+</div>
