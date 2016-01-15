@@ -1,4 +1,2 @@
-magens_boilerplate
+XSCRIBE TESTING ACTIVITY
 ==================
-
-Boilerplate for creating new Projects
