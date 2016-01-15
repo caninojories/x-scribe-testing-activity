@@ -20,5 +20,12 @@
     "angular-mocks": "~1.4.8",
     "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js",
     "bardjs": "~0.1.8"
+  },
+  "overrides": {
+    "lodash": {
+      "main": [
+        "vendor/underscore/underscore.js"
+      ]
+    }
   }
 }
